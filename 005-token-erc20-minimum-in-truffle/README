@@ -1,0 +1,3 @@
+Took the minimal ERC20 token from '004-token-erc20-minimum-in-dapple' and managed to build it using truffle. Type "truffle compile" in order to compile it.
+
+No unit tests for now. 
