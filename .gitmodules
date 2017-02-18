@@ -1,0 +1,6 @@
+[submodule "006-full-erc20-token-from-scratch/src/erc20"]
+	path = 006-full-erc20-token-from-scratch/src/erc20
+	url = https://github.com/dapphub/erc20
+[submodule "006-full-erc20-token-from-scratch/src/ds-test"]
+	path = 006-full-erc20-token-from-scratch/src/ds-test
+	url = https://github.com/dapphub/ds-test
