@@ -1,0 +1,3 @@
+Took some sample minimal ETC20 token contract and developed some unit tests for it using the dapple framework.
+
+Use "dapple build" and "dapple test" commands.
