@@ -1,12 +1,12 @@
 pragma solidity 0.4.9;
 
-contract Token {
+import './TokenEventDefinitions.sol';
+
+contract Token is TokenEventDefinitions {
     string public name;
     string public symbol;
     uint8 public decimals;
     mapping (address => uint256) public balanceOf;
-    
-    event Transfer(address indexed from, address indexed to, uint256 value);
     
     function Token(uint256 initialSupply, string tokenName, uint8 decimalUnits, string tokenSymbol) {
         balanceOf[msg.sender] = initialSupply;              // Give the creator all initial tokens

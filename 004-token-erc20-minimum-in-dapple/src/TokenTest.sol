@@ -2,13 +2,12 @@ pragma solidity ^0.4.9;
 
 import 'dapple/test.sol';
 import './Token.sol';
+import './TokenEventDefinitions.sol';
 
-contract TokenTest is Test {
+contract TokenTest is Test, TokenEventDefinitions {
     Token token = new Token(100, "Test Token", 16, "TTK");
     Tester user1;
     Tester user2;
-
-    event Transfer(address indexed from, address indexed to, uint256 value);
 
     function setUp() {
         user1 = new Tester();
