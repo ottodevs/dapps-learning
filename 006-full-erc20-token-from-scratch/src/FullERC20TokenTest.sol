@@ -16,8 +16,7 @@
 
 pragma solidity ^0.4.8;
 
-import "ds-test/src/test.sol";
-
+import 'dapple/test.sol';
 import "./FullERC20Token.sol";
 
 contract TokenUser {
@@ -56,7 +55,7 @@ contract TokenUser {
     }
 }
 
-contract FullERC20TokenTest is DSTest {
+contract FullERC20TokenTest is Test {
     uint constant initialBalance = 1000;
 
     ERC20 token;
@@ -117,7 +116,7 @@ contract FullERC20TokenTest is DSTest {
     function testChargesAmountApproved() logs_gas {
         uint amountApproved = 20;
         token.approve(user2, amountApproved);
-        assert(user2.doTransferFrom(this, user2, amountApproved));
+        assertTrue(user2.doTransferFrom(this, user2, amountApproved));
         assertEq(token.balanceOf(this), initialBalance - amountApproved);
     }
 
