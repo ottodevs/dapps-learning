@@ -17,7 +17,7 @@
 pragma solidity ^0.4.8;
 
 import 'dapple/test.sol';
-import "./FullERC20Token.sol";
+import './FullERC20Token.sol';
 
 contract TokenUser {
     ERC20  token;
@@ -62,7 +62,7 @@ contract FullERC20TokenTest is Test {
     TokenUser user1;
     TokenUser user2;
 
-    function DSTokenTest() {
+    function setUp() {
         token = createToken();
         user1 = new TokenUser(token);
         user2 = new TokenUser(token);
@@ -73,7 +73,7 @@ contract FullERC20TokenTest is Test {
     }
 
     function testSetupPrecondition() {
-        assertEq(token.balanceOf(this), initialBalance);
+        assertEq(token.balanceOf(address(this)), initialBalance);
     }
 
     function testTransferCost() logs_gas() {
